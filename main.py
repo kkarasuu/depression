@@ -71,4 +71,4 @@ st.write('Also, regardless of gender, fewer people suffer from depression with a
 fig = px.violin(data, x="sex", y="Age", color="depressed")
 st.plotly_chart(fig)
 st.write('Reference Information')
-st.write('If gender is 0, then it is male; if gender is 1, then it is female. If depressed is 0, then a person not suffering from depression; if depressed is 1, then a person suffering  from depression')
+st.write('If gender is 0, then it is male; if gender is 1, then it is female. If depressed is 0, then a person not suffering from depression; if depressed is 1, then a person suffering  from depression.')
