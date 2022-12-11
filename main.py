@@ -12,7 +12,7 @@ st.write(data.head())
 st.write('This table shows statistics of various life factors of healthy and sick people')
 
 # printing of mean, median and standard of age, number of children and education level of people with depression
-print(data[["Age", "Number_children", "education_level"]].describe().loc[['mean', '50%', 'std']])
+st.plotly_chart(data[["Age", "Number_children", "education_level"]].describe().loc[['mean', '50%', 'std']])
 
 # data cleanup
 data.dropna()
