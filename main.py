@@ -5,11 +5,11 @@ import plotly.express as px
 # reading given data
 data = pd.read_csv("b_depressed.csv")
 
-st.title('Mid-term report')
-st.subheader('Credit cards holders analys')
-st.write('Table short info')
+st.title('DSBA project')
+st.subheader('Healthy and depressed people')
+st.write('Table with a short info')
 st.write(data.head())
-st.write('This chart shows numbers of existing customers of specific age')
+st.write('This table shows statistics of various life factors of healthy and sick people')
 
 # printing of mean, median and standard of age, number of children and education level of people with depression
 print(data[["Age", "Number_children", "education_level"]].describe().loc[['mean', '50%', 'std']])
