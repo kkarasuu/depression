@@ -35,15 +35,14 @@ st.write('This chart shows living expenses of respondents')
 fig = px.scatter(data, x="living_expenses", y="Survey_id")
 st.plotly_chart(fig)
 st.write('This scatter graph has a strange line on itself. I believe that it is necessary to clear the graph from this line, for a more accurate analysis')
-st.write('')
 
 # There is a strange line, let's delete it
 data['living_expenses'] = pd.to_numeric(data['living_expenses'])
 data = data.loc[data['living_expenses'] != 26692283]
 
-st.write('Now it is clear. We can clearly see the living expenses of respondents. It also should be mentioned that less people spend more money')
 fig = px.scatter(data, x="living_expenses", y="Survey_id")
 st.plotly_chart(fig)
+st.write('Now it is clear. We can clearly see the living expenses of respondents. It also should be mentioned that less people spend more money')
 st.write('')
 
 # 3rd simple plot - pie chart
